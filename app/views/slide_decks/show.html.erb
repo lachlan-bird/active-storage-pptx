@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @slide_deck.name %>
+</p>
+
+<p>
+  <strong>Preview: </strong>
+  <%= image_tag @slide_deck.presentation.preview(resize: "400x400") %>
+</p>
+
+<%= link_to 'Edit', edit_slide_deck_path(@slide_deck) %> |
+<%= link_to 'Back', slide_decks_path %>
